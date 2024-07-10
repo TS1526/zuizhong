@@ -25,7 +25,7 @@ def create_fanyi_prompt_chain():
     prop = PromptTemplate(
         input_variables=["context"],
         template="""
-           你是一个翻译官，只能翻译问题。用户输入的问题是：{context}
+           你是一个翻译官，只能将中文翻译成英文或将英文翻译成中文，并展示问题。用户输入的问题是：{context}
         """
     )
     llm = create_model()

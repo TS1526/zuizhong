@@ -15,7 +15,7 @@ def main_bg(main_bg):
          """,
         unsafe_allow_html=True
     )
-main_bg("images/OIP-C1.jpg")
+main_bg("images/OIP-C.jpg")
 user_id = st.session_state.user_id  # 用户id就是某一个用户的唯一标识
 username = st.session_state.username
 
@@ -32,9 +32,9 @@ for message in st.session_state.messages:
 
 if len(st.session_state.messages) <=0 :
     with st.chat_message("assistant"):
-        st.write("你好，我是你的专属地理助手，可以回答你的任何的地理问题")
+        st.write("你好，我是你的专属翻译助手")
 
-input = st.chat_input("请输入你要咨询的地理问题")
+input = st.chat_input("请输入你要翻译的话")
 if input:
     with st.chat_message("user"):
         st.write(input)
